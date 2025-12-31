@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Generator de Vrăji</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f8;
+            padding: 40px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        #vraja {
+            margin: 20px 0;
+            padding: 15px;
+            background: #eee;
+            border-radius: 6px;
+            min-height: 40px;
+            font-weight: bold;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        button {
+            display: block;
+            margin: 20px auto 0;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Generator de Vrăji</h1>
+
+    <div class="container">
+        <div id="vraja">Apasă butonul pentru a genera o vrajă</div>
+
+        <ul id="lista-vraji">
+            <li><strong>Ignis</strong> – „Flamma Lux”</li>
+            <li><strong>Aeris</strong> – „Ventus Alar”</li>
+            <li><strong>Aqua</strong> – „Unda Clara”</li>
+            <li><strong>Terra</strong> – „Saxum Fortis”</li>
+        </ul>
+
+        <button onclick="genereazaVraja()">Generează vrajă</button>
+    </div>
+
+    <script>
+        const vraji = [
+            "Ignis – Flamma Lux",
+            "Aeris – Ventus Alar",
+            "Aqua – Unda Clara",
+            "Terra – Saxum Fortis"
+        ];
+
+        function genereazaVraja() {
+            const index = Math.floor(Math.random() * vraji.length);
+            document.getElementById("vraja").textContent = vraji[index];
+        }
+    </script>
+
+</body>
+</html>
